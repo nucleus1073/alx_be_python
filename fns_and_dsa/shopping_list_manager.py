@@ -9,13 +9,14 @@ def display_menu():
     print("4. Exit")
 
 
+# Explicitly define an array named `shopping_list`
+shopping_list = []
+
+
 def main():
     """
     Main function to manage the shopping list.
     """
-    # Define the shopping list as an array
-    shopping_list = []
-    
     while True:
         # Call the display_menu function
         display_menu()
@@ -35,7 +36,7 @@ def main():
                 print(f"'{item}' has been added to the shopping list.")
             else:
                 print("Item name cannot be empty.")
-        
+
         elif choice == 2:
             # Remove item
             item = input("Enter the name of the item to remove: ").strip()
@@ -44,7 +45,7 @@ def main():
                 print(f"'{item}' has been removed from the shopping list.")
             else:
                 print(f"'{item}' was not found in the shopping list.")
-        
+
         elif choice == 3:
             # View list
             if shopping_list:
@@ -53,15 +54,16 @@ def main():
                     print(f"{i}. {item}")
             else:
                 print("The shopping list is currently empty.")
-        
+
         elif choice == 4:
             # Exit
             print("Goodbye!")
             break
-        
+
         else:
             # Handle invalid input
             print("Invalid choice. Please select a number between 1 and 4.")
+
 
 # Ensure this block is properly aligned with no indentation issues
 if __name__ == "__main__":
