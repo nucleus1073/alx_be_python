@@ -8,17 +8,26 @@ def display_menu():
     print("3. View List")
     print("4. Exit")
 
+
 def main():
     """
     Main function to manage the shopping list.
     """
+    # Define the shopping list as an array
     shopping_list = []
     
     while True:
+        # Call the display_menu function
         display_menu()
-        choice = input("Enter your choice: ").strip()
-        
-        if choice == '1':
+
+        # Ensure choice input is taken as a number
+        try:
+            choice = int(input("Enter your choice (1-4): ").strip())
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 4.")
+            continue
+
+        if choice == 1:
             # Add item
             item = input("Enter the name of the item to add: ").strip()
             if item:
@@ -27,7 +36,7 @@ def main():
             else:
                 print("Item name cannot be empty.")
         
-        elif choice == '2':
+        elif choice == 2:
             # Remove item
             item = input("Enter the name of the item to remove: ").strip()
             if item in shopping_list:
@@ -36,7 +45,7 @@ def main():
             else:
                 print(f"'{item}' was not found in the shopping list.")
         
-        elif choice == '3':
+        elif choice == 3:
             # View list
             if shopping_list:
                 print("\nCurrent Shopping List:")
@@ -45,14 +54,14 @@ def main():
             else:
                 print("The shopping list is currently empty.")
         
-        elif choice == '4':
+        elif choice == 4:
             # Exit
             print("Goodbye!")
             break
         
         else:
             # Handle invalid input
-            print("Invalid choice. Please try again.")
+            print("Invalid choice. Please select a number between 1 and 4.")
 
 # Ensure this block is properly aligned with no indentation issues
 if __name__ == "__main__":
