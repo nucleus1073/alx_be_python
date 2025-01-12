@@ -9,7 +9,7 @@ def display_menu():
     print("4. Exit")
 
 
-# Explicitly define an array named `shopping_list`
+# Define the shopping list as an array
 shopping_list = []
 
 
@@ -65,6 +65,5 @@ def main():
             print("Invalid choice. Please select a number between 1 and 4.")
 
 
-# Ensure this block is properly aligned with no indentation issues
 if __name__ == "__main__":
     main()
