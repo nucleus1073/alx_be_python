@@ -40,7 +40,6 @@ def main():
             # User selects an option
             choice = int(input("Enter your choice (1-3): ").strip())
             
-            # Perform operations based on user choice
             if choice == 1:
                 # Conversion from Fahrenheit to Celsius
                 try:
