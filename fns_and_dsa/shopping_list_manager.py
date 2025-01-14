@@ -2,7 +2,7 @@ def display_menu():
     """
     Display the menu options for the shopping list manager.
     """
-    print("Shopping List Manager")
+    print("[Shopping List Manager]")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -30,7 +30,7 @@ def main():
 
         if choice == 1:
             # Add item
-            item = input("Enter the name of the item to add: ").strip()
+            item = input("Enter the item to add: ").strip()  # Updated prompt to match exactly
             if item:
                 shopping_list.append(item)
                 print(f"'{item}' has been added to the shopping list.")
