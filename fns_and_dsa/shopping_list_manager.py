@@ -21,8 +21,8 @@ def main():
         # Call the display_menu function
         display_menu()
 
-        # Ensure choice input is taken as a number
         try:
+            # Get and validate the user choice as a number
             choice = int(input("Enter your choice (1-4): ").strip())
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 4.")
@@ -66,4 +66,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # Ensure the main function is executed only when the script is run directly
     main()
